@@ -1,0 +1,41 @@
+<교육>
+c:\ai_exam
+
+<툴 설치>
+아나콘다 - 가상환경(별도 디렉토리)
+
+디렉토리내에
+/venv/ 설치프로그램이 모두 설치
+
+<개발툴>
+- 아나콘다 = 가상화를 만들어주는 프레임워크
+  google 검색 "아나콘다"
+  다운로드 설치
+  *주의사항
+  C:\Users\hi\anaconda3 <- 한글(X)
+  Add Anaconda 3 to my PATH ....  <- 체크
+  환경 -> base(root)
+
+- vscode 개발툴
+  google "vscode"
+  Download  설치
+
+  <점심 후>
+  코파일럿 : git 아이디/암호
+
+- cursor.ai
+  google 계정  "cursor ai"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
