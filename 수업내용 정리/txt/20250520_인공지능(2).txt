@@ -137,3 +137,6 @@ python -m ipykernel install --user --name p36t19_beautygan --display-name "p36t1
 
 <수업시간에 추가로 다루었으면 하는 부분>
 (1) pdf 파일을 읽고, 기록하는 부분
+
+
+!python train.py --img 415 --batch 16 --epochs 300 --data /content/data/data.yaml --cfg ./models/yolov5s.yaml --weights yolov5s.pt --name fire_yolov5s_results
