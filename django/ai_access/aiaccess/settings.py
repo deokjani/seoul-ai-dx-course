@@ -9,7 +9,6 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
-
 import os
 import pymysql
 from pathlib import Path
@@ -25,12 +24,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure--^m$m1m7_4s_lu*on3wpvxvs*9sg(sc2^h4hv-p$%#-9!au^*3"
+SECRET_KEY = "django-insecure-5n+p!+=uxg445vd(w&gy_dy+48^_b=9&mfuwn&q=+3p&j0@ab-"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -42,7 +41,11 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "ai","camera","landing","member","api",
+    "landing",
+    "member",
+    "camera",
+    "ai",
+    "api",
 ]
 
 MIDDLEWARE = [
@@ -86,7 +89,7 @@ DATABASES = {
         "ENGINE": "django.db.backends.mysql",
         "NAME": "aiaccess_db",
         "USER": "aiaccess",
-        "PASSWORD": "1234",
+        "PASSWORD": "0000",
         "HOST": "localhost",
         "PORT": "3306",
         "OPTIONS": {
@@ -124,7 +127,7 @@ TIME_ZONE = "Asia/Seoul"
 
 USE_I18N = True
 
-USE_TZ = False
+USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
