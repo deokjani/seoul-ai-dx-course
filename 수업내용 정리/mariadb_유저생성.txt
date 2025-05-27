@@ -1,0 +1,14 @@
+mariadb user 생성
+
+
+CREATE DATABASE 아이디_db default CHARACTER SET UTF8;
+
+create user '아이디'@'localhost' identified by '암호';
+
+create user '아이디'@'%' identified by '암호';
+
+grant all privileges on 7eerup_db.* to '아이디'@'localhost';
+
+grant all privileges on 7eerup_db.* to '아이디'@'%';
+
+flush privileges;
