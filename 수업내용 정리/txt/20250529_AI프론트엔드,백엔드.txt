@@ -1,0 +1,65 @@
+<AI서비스 프론트엔드, 백엔드>
+1. 개발구성
+   (1) 서버 : 116.125.140.113
+   (2) 데이터베이스 : MariaDB
+       본인계정
+   (3) 클라이언트
+       - 개발툴 : NextJS
+       - 통신프로토콜 : AXIOS(*), Fetch
+       - 통신방식 : API, Json형식
+   (4) 서버
+       - 개발툴 : DJango
+       - 통신방식 : API(자체개발), Json형식
+       - 데이터베이스 : MariaDB
+
+2. 서버에 생성할 계정정보
+   ~$ mkdir gemini_chatbot
+   ~$ cd gemini_chatbot
+   * 백엔드 폴더
+   ~$ mkdir backend
+   * 클라이언트 폴더
+   ~$ mkdir frontend
+   ~$ ls
+     backend  frontend
+
+3. Backend AI Chatbot API 엔진 개발
+   (1) 가상환경 구축
+       $ python3.11 -m venv venv
+   (2) 가상환경 활성화
+       $ source ./venv/bin/activate
+       (venv) .. $
+       가상환경이 활성화딤
+   (3) 프레임워크 설치
+       $ pip install django
+       $ django-admin --version
+   (4) 프로젝트 생성( 현재 디렉토리에 생성 )
+       $ django-admin startproject backend .
+
+<포트고민>
+8000~12000
+backend : 8890
+frontend : 8891
+
+   (5) 프로젝트 실행
+       $ python manage.py runserver 0.0.0.0:8890
+   (6) 챗봇 프로그램 경로 이동
+       $ cd ~/chatbot
+   (7) 복사
+       $ cp 명령어
+
+
+4. next.js 설치 명렁어
+npx create-next-app@latest . 
+
+
+
+
+
+
+
+
+
+
+
+
+
