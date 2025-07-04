@@ -1,0 +1,79 @@
+<조별 서비스 마무리 및 서버등록>
+** 배포방법은 4시정도 알려주겠습니다.
+1조 viewboth.aibrain.kr 11235
+     viewbothapi.aibrain.kr 11236
+2조 ongill.aibrain.kr 9100
+     ongillapi.aibrain.kr 29384
+3조 donghwa.aibrian.kr 8720
+     donghwaapi.aibrain.kr 8721
+4조 buring.aibrain.kr 11333
+     buringapi.aibrain.kr 11222
+6조 phishingcare.aibrain.kr 12100
+     https://phishingcareapi.aibrain.kr 12200
+
+--------------------------------------------------
+
+1. frontend 컴파일 / 배포
+react, nextjs ->
+1. 포트 번호 설정
+   nano package.json
+   -p 포트번호
+2. build
+   npm run build
+2. 배포
+   (nextjs) npm run start
+   (react) npx serve dist
+3. 스크립트
+   nano frontend.sh       <- 파일 생성
+   npm run start           <- 파일 안에 내용
+   ctrl+o, ctrl+x            <- 저장
+   
+   chmod 755 ./frontend.sh   <- 파일실행권한
+   
+   # 프론트 가동 방법
+   pm2 start ./frontend.sh
+   pm2 list
+   # 프론트 중지
+   pm2 stop id
+
+
+   
+   
+
+** 주의사항
+   한번이라도 배포후에 npm run dev를 실행하면
+   배포본은 파괴.
+   다시 빌드, 배포 해야함.
+
+2. backend 배포
+   ** 정석
+   django는 wsgi라는 프레임워크를 이용해서
+   1. uvicorn이라는 서비스를 가동
+   2. Apahce를 이용해서 가공
+   ** 다른방법으로 배포
+   (1) script파일을 생성
+       ** 파일저장
+       nano backend.sh
+       python manage.py runserver 0.0.0.0:29384
+       ctrl+o, ctrl+x
+       ** 파일에 실행권한을 부여
+       chmod 755 ./backend.sh
+   (2) ssh를 종료해도 백그라운드로 실행
+       ** 실행방법
+       source ./venv/bin/activate
+       nohup ./backend.sh > log.txt &
+       ** 실행종료
+       ps -ax | grep 29384
+       kill 902492
+   (3) 로그파일을 모니터링 하고 싶을때
+       tail -f 로그파일명
+
+       
+
+
+
+
+
+
+
+
